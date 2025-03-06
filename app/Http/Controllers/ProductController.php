@@ -12,7 +12,7 @@ class ProductController extends Controller
     }
     
     public function create(){
-        return view('products.create'); //
+        return view('products.create'); // retornar el formulario para crear un producto
     }
 
     public function show($name){
