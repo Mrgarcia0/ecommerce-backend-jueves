@@ -16,6 +16,6 @@ class ProductController extends Controller
     }
 
     public function show($name){
-        echo "PRODUCTO: $name";
+        return view('products.show');
     }
 }
