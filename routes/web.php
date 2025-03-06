@@ -1,23 +1,17 @@
 <?php
 
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', HomeController::class );
 
-Route::get('/products', function ($name) {
-    echo "LISTADO DE TODOS LOS PRODUCTOS";
-});
+Route::get('/products', [ProductController::class, 'index']);
 
-Route::get('/products/create', function () {
-    echo "FORMULARIO PARA CREAR UN PRODUCTO";
-});
+Route::get('/products/create}', [ProductController::class, 'create']);
 
-Route::get('/products/{name}', function ($name) {
-    echo "PRODUCTO: $name";
-});
+Route::get('/products/{name}}', [ProductController::class, 'show']);
 
-Route::get('/products/{name}/{category}', function ($name, $category) {
-    echo "PRODUCTO: $name, y tiene una categoria $category";
-});
+//Route::get('/products/{name}/{category}}', function ($name, $category) {
+    //echo "PRODUCTO: $name, y tiene una categoria $category";
+//});
