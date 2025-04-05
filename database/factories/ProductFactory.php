@@ -22,7 +22,7 @@ class ProductFactory extends Factory
             'description' =>fake()->paragraph(),
             'price' =>fake()->randomFloat(2,10000,3000000),
             'category_id'=> Category::inRandomOrder()->first()->id,
-            'url_image'=> 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJWZXRfiNaoy3ETnrtiTy6PbWTK53OBtujyQ&s'
+            'url_image'=> 'https://http2.mlstatic.com/D_NQ_NP_706967-MCO79774717271_102024-O.webp'
             
         ];
     }

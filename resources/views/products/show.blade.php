@@ -1,19 +1,21 @@
 @extends('layout.app')
 
 @section('content')
-
-    <!-- Detalles del Producto -->
-    <div class="container product-container">
-        <div class="product-image">
-            <img src="producto.jpg" alt="Producto" width="280">
-        </div>
-        <div class="product-details">
-            <h2 class="product-title">Nombre del Producto</h2>
-            <p><strong>Categoría:</strong> Electrónica</p>
-            <p>Descripción del producto. Este es un producto increíble con características únicas que lo hacen destacar en el mercado. Perfecto para cualquier ocasión.</p>
-            <p class="product-price">$99.99</p>
-            <button class="btn btn-cart">Agregar al Carrito</button>
+    <!-- Contenido -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="card p-3">
+                    <img src="{{$product->url_image}}" class="img-fluid" alt="Producto">
+                </div>
+            </div>
+            <div class="col-md-7">
+                <h2 class="text-warning">{{$product->name}}</h2>
+                <p><strong>Categoría:</strong>{{$product->category_id}}</p>
+                <p>{{$product->description}}.</p>
+                <h3 class="text-warning">${{$product->price}}</h3>
+                <button class="btn btn-warning">Agregar al Carrito</button>
+            </div>
         </div>
     </div>
-
 @endsection
