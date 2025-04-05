@@ -2,12 +2,22 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
     public function index(){
-        return view('products.index'); //retornar una lista de productos
+
+        $listProducts=Product::paginate(12);
+       // dd($listProducts);
+
+
+
+        return view('products.index',[
+
+            'listProducts'=> $listProducts
+        ]); //retornar una lista de productos
 
     }
     
